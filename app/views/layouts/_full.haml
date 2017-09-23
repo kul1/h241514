@@ -22,6 +22,7 @@
       %div{{"data-role" => "page"}.merge(cache) }
         %div{{"data-role" => "header"}.merge(backbtn)}
           %h1= @title || DEFAULT_TITLE
+          = render :partial => "mindapp/facebook-login"
         %div{"data-role" => "content"}
           = yield
       = render :partial => "mindapp/static"
