@@ -1,0 +1,9 @@
+#./app/view/mindapp/_facebook-login.haml
+#notify
+  %p.notice= notice
+  %p.alert= alert
+#user-info
+  - if login?
+    %a{"data-panel" => "main", :href => logout_path, "data-ajax"=>"false"} Sign Out
+  - else
+    %a{:href=> "/auth/facebook", "data-panel" => "main"} Sign In with Facebook
