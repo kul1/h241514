@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get '/logout' => 'sessions#destroy', :as => 'logout'
   get '/auth/failure' => 'sessions#failure'
   post '/auth/:provider/callback' => 'sessions#create'
+  get '/auth/:provider/callback' => 'sessions#create'
+
   resources :sessions
   resources :identities
   mount Ckeditor::Engine => '/ckeditor'
