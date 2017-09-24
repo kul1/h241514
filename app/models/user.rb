@@ -14,16 +14,29 @@ class User
   def self.from_omniauth(auth)
     where(:provider=> auth["provider"], :uid=> auth["uid"]).first || create_with_omniauth(auth)
   end
+
   def self.create_with_omniauth(auth)
-    identity = Identity.find auth.uid
+        bingding.pry
+
+    case user.provider 
+      when 'identity'
+        identity = Identity.find auth.uid
+    end
     create! do |user|
       user.provider = auth.provider
-      user.uid = auth.uid
-      user.code = identity.code
-      user.email = identity.email
+      user.uid = auth["uid"]
       user.role = "M"
+      user.name = auth["info"]["name"]
+      case user.provider 
+        when 'identity'
+          user.code = identity.code
+          user.email = identity.email
+      end      
     end
+
   end
+
+
   def ma_secured?
     role.upcase.split(',').include?(ma_secured_ROLE)
   end
