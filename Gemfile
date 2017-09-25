@@ -5,7 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'mindapp2', :path =>'/Users/kul/mindapp2/gem/mindapp2'
+#gem 'mindapp2', :path =>'/Users/kul/mindapp2/gem/mindapp2'
+gem 'mindapp2', github: 'kul1/mindapp2', branch: 'v0.1.4'
 gem 'omniauth-facebook'
 gem 'dotenv-rails'
 
