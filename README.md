@@ -11,3 +11,8 @@ Mongoid
 REQUIRE:
   https://github.com/kul1/mindapp2
   mongoid
+
+DEMO:https://h241514.herokuapp.com/
+login: admin
+password:secret
+  
