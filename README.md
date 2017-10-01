@@ -1,6 +1,7 @@
 # h241514
 
 ## [Mindapp 2](https://github.com/kul1/mindapp2) with facebook
+![Screenshot](https://user-images.githubusercontent.com/3953832/31057581-a286f3a8-a6aa-11e7-8af3-d5720b7ba10e.png)
 
 Work from gem 'mindapp2', github: 'kul1/mindapp2', branch: 'v0.1.4'
 
