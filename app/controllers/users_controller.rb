@@ -4,7 +4,6 @@ class UsersController < ApplicationController
     @today = Date.today
     @xmains = current_ma_user.xmains.in(status:['R','I']).asc(:created_at)
   end
-
   # mindapp methods
   def update_user
     # can't use session, current_ma_user inside mindapp methods
