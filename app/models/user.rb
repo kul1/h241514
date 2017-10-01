@@ -27,7 +27,10 @@ class User
           user.provider = auth.provider
           user.code = auth.info.name
           user.role = "M"
-          debugger                
+          puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+          puts user.email + " " + user.uid + " " + user.provider + " " + user.code + " " +  user.role
+          puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+
       end
      end
   end

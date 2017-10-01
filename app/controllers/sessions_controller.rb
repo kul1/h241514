@@ -10,10 +10,16 @@ class SessionsController < ApplicationController
   def create
     auth = request.env["omniauth.auth"]
     user = User.from_omniauth(auth)
-    session[:user_id] = user.id
-    #redirect_to '/mindapp/pending'
-    refresh_to root_path
 
+    session[:user_id] = user.id
+
+    puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+    puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+
+    puts auth
+    puts ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"
+
+    refresh_to root_path
   rescue
     redirect_to root_path, :alert=> "Authentication failed, please try again."
   end
