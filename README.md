@@ -1,18 +1,31 @@
 # h241514
-TEST Mindapp2 with facebook login  
-THIS IS MY TEST SITE 
-CODE MAY NOT UPDATED
 
-ENV: 
-Rails 5.1.4
-Ruby 2.1.4
-Mongoid
+## [Mindapp 2](https://github.com/kul1/mindapp2) with facebook
 
-REQUIRE:
-  https://github.com/kul1/mindapp2
-  mongoid
+Work from gem 'mindapp2', github: 'kul1/mindapp2', branch: 'v0.1.4'
 
-DEMO:https://h241514.herokuapp.com/
-login: admin
-password:secret
+  - modified user model
+  - modified controller: session
   
+
+# Features!
+
+  - Omniauth-facebook 
+  - Omniauth-identity
+  - jquery.mobile
+
+### Note:
+  - Recheck Facebook API and APP Secret when change from test to production
+ 
+
+### Todo
+ - Add to Mindapp2 gem
+ - Add to github gem 'mindapp2', github: 'kul1/mindapp2', branch: 'v0.1.4'
+
+License
+----
+
+MIT
+
+
+
